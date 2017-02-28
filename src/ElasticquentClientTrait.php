@@ -20,7 +20,7 @@ trait ElasticquentClientTrait
     {
         $config = $this->getElasticConfig();
 //        dd($config);
-        $isAWS = $this->getElasticConfig('ELASTIC_AWS');
+        $isAWS = $this->getElasticConfig('aws_sign');
         if ($isAWS) {
             $provider = CredentialProvider::fromCredentials(
                 new Credentials($config['aws_key'], $config['aws_secret'])
